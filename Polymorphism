@@ -1,0 +1,88 @@
+class Vehicle {
+    String brand;
+    String type;
+    int year;
+    String color;
+    double price;
+
+    void start() {
+        System.out.println("Vehicle is starting...");
+    }
+}
+
+class Car extends Vehicle {
+    String model;
+
+    void displayInfo() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Type: " + type);
+        System.out.println("Year: " + year);
+        System.out.println("Color: " + color);
+        System.out.println("Price: " + price);
+        System.out.println("Model: " + model);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car myCar = new Car();
+
+        // Changed attributes
+        myCar.brand = "Toyota";
+        myCar.type = "SUV";
+        myCar.year = 2023;
+        myCar.color = "Black";
+        myCar.price = 1800000.00;
+        myCar.model = "RAV4";
+
+        myCar.start();
+        myCar.displayInfo();
+    }
+}
+
+
+
+
+class Vehicle {
+
+    String brand;
+    String model;
+    String type;
+    int year;
+    String color;
+    double price;
+
+    void info() {
+        System.out.println("This is a vehicle\n");
+    }
+
+    // Overloaded method to display brand and year together
+    void info(String brand, int year) {
+        System.out.println("Brand: " + brand + ", Year: " + year);
+    }
+
+    void displayAttributes() {
+        System.out.println("Type: " + type);
+        System.out.println("Color: " + color);
+        System.out.println("Price: " + price);
+        System.out.println("Model: " + model);
+    }
+
+    void speed() {
+        System.out.println("Vehicle has an average speed.");
+    }
+}
+
+class Car extends Vehicle {
+    @Override
+    void speed() {
+        System.out.println("Car runs at 150 km/h.");
+    }
+}
+
+class Motorcycle extends Vehicle {
+    @Override
+    void speed() {
+        System.out.println("Motorcycle runs at 120 km/h.");
+    }
+}
