@@ -27,7 +27,6 @@ public class Main {
     public static void main(String[] args) {
         Car myCar = new Car();
 
-        // Changed attributes
         myCar.brand = "Toyota";
         myCar.type = "SUV";
         myCar.year = 2023;
@@ -56,7 +55,6 @@ class Vehicle {
         System.out.println("This is a vehicle\n");
     }
 
-    // Overloaded method to display brand and year together
     void info(String brand, int year) {
         System.out.println("Brand: " + brand + ", Year: " + year);
     }
