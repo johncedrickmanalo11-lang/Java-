@@ -1,0 +1,34 @@
+public class Main {
+    public static void main(String[] args) {
+
+        Vehicle v;
+
+        v = new Car();
+        v.brand = "Toyota";
+        v.model = "RAV4";
+        v.type = "SUV";
+        v.year = 2023;
+        v.color = "Black";
+        v.price = 1800000.0;
+
+        v.info();
+        v.info(v.brand, v.year);
+        v.displayAttributes();
+        v.speed();
+
+        System.out.println();
+
+        v = new Motorcycle();
+        v.brand = "Honda";
+        v.model = "CBR500R";
+        v.type = "Sport";
+        v.year = 2020;
+        v.color = "Red";
+        v.price = 450000.0;
+
+        v.info();
+        v.info(v.brand, v.year);
+        v.displayAttributes();
+        v.speed();
+    }
+}
